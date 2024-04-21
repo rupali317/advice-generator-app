@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-//import { DesktopWidth } from "../constants/Breakpoints";
 
 export const BaseStyles = createGlobalStyle`
     :root {
@@ -26,7 +25,7 @@ export const BaseStyles = createGlobalStyle`
         --letter-spacing-3: 0.21625rem; /* 3.46px */
         --letter-spacing-4: 0.255625rem; /* 4.09px */
 
-        /* Paragraph spacing of 1px */
+        /* RRC: Paragraph spacing of 1px */
 
         /* Spacing */
         --space-xs: 1.25rem; /* 20px */
@@ -49,7 +48,7 @@ export const BaseStyles = createGlobalStyle`
 
     @font-face {
         font-family: "Manrope";
-        src: url("/fonts/Manrope-ExtraBold.tff") format("truetype");
+        src: url("/fonts/Manrope-ExtraBold.ttf") format("truetype");
         font-style: normal;
         font-weight: 800;
         font-display: swap;
