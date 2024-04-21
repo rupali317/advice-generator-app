@@ -1,5 +1,5 @@
-import { styled, createGlobalStyle } from "styled-components";
-import { DesktopWidth } from "../constants/Breakpoints";
+import { createGlobalStyle } from "styled-components";
+//import { DesktopWidth } from "../constants/Breakpoints";
 
 export const BaseStyles = createGlobalStyle`
     :root {
@@ -7,9 +7,9 @@ export const BaseStyles = createGlobalStyle`
         --color-primary-1: hsl(150, 100%, 66%); /* #53ffaa */
         --color-secondary-1: hsl(219, 22%, 16%); /* #202733 */
         --color-secondary-2: hsl(217, 19%, 24%); /* #313a48 */
-        --color-secondary-2: hsl(217, 19%, 24%); /* #313a48 */
+        --color-secondary-3: hsl(217, 19%, 38%); /* #4f5d74 */
+        --color-secondary-4: hsl(0, 0%, 0%, 10.02%);
         --color-neutral-1: hsl(193, 38%, 86%); /* #cee3e9 */
-        --color-neutral-2: hsl(0, 0%, 0%, 10.02%);
 
         /* Typography */
         --font-size-xs: 0.6875rem; /* 11px */
@@ -17,7 +17,7 @@ export const BaseStyles = createGlobalStyle`
         --font-size-m: 1.5rem; /* 24px */
         --font-size-l: 1.75rem; /* 28px */
 
-        --font-size-extra-bold: 800;
+        --font-weight-extra-bold: 800;
 
         --line-height-normal: normal;
 
@@ -49,7 +49,7 @@ export const BaseStyles = createGlobalStyle`
 
     @font-face {
         font-family: "Manrope";
-        src: url("/fonts/Manrope-ExtraBold.tff") format("tff");
+        src: url("/fonts/Manrope-ExtraBold.tff") format("truetype");
         font-style: normal;
         font-weight: 800;
         font-display: swap;
@@ -97,8 +97,8 @@ export const ResetStyles = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
-    /* Set shorter line heights on headings and interactive elements, Balance text wrapping on headings*/
-    /* Inherit font for inputs and buttons */
+    /* Set shorter line heights on interactive elements like buttons */
+    /* Inherit font for buttons */
     button {
         line-height: 1.1;
         font-family: inherit;
@@ -115,5 +115,11 @@ export const ResetStyles = createGlobalStyle`
 `;
 
 export const DefaultStyles = createGlobalStyle`
-
+    body {
+        font-family: "Manrope";
+        font-weight: var(--font-weight-extra-bold);
+        line-height: var(--line-height-normal);
+        background-color: var(--color-secondary-1);
+        color: var(--color-neutral-1);
+    }
 `;
