@@ -28,6 +28,7 @@ export const BaseStyles = createGlobalStyle`
         /* RRC: Paragraph spacing of 1px */
 
         /* Spacing */
+        --space-xxs: 1rem; /* 16px */
         --space-xs: 1.25rem; /* 20px */
         --space-s: 1.5rem; /* 24px */
         --space-base: 2.5rem; /* 40px */

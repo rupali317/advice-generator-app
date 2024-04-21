@@ -24,7 +24,7 @@ export const AdviceCard = () => {
       <picture>
         <source
           srcSet="/images/pattern-divider-desktop.svg"
-          media={`(min-width:${DesktopWidth}`}
+          media={`(min-width:${DesktopWidth})`}
         />
         <img
           src="/images/pattern-divider-mobile.svg"
