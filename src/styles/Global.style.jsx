@@ -120,5 +120,8 @@ export const DefaultStyles = createGlobalStyle`
         line-height: var(--line-height-normal);
         background-color: var(--color-secondary-1);
         color: var(--color-neutral-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `;
