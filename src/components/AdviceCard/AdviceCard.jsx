@@ -16,9 +16,9 @@ export const AdviceCard = () => {
   };
 
   return (
-    <AdviceCardStyle.Container>
+    <AdviceCardStyle.Container aria-live="assertive">
       <AdviceCardStyle.RibbonText>
-        advice #{advice.id}
+        {`advice # ${advice.id}`}
       </AdviceCardStyle.RibbonText>
       <AdviceCardStyle.Quote>{advice.text}</AdviceCardStyle.Quote>
       <picture>
@@ -34,6 +34,7 @@ export const AdviceCard = () => {
       </picture>
       <AdviceCardStyle.Button
         onClick={fetchAdviceApi}
+        title="Generate advice"
         aria-label="Generate advice"
       >
         <img src="/images/icon-dice.svg" alt="" role="presentation" />
