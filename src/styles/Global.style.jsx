@@ -4,6 +4,7 @@ export const BaseStyles = createGlobalStyle`
     :root {
         /* Colors */
         --color-primary-1: hsl(150, 100%, 66%); /* #53ffaa */
+        --color-primary-2: hsl(156, 66%, 32%); /* ##1c8a5d */
         --color-secondary-1: hsl(219, 22%, 16%); /* #202733 */
         --color-secondary-2: hsl(217, 19%, 24%); /* #313a48 */
         --color-secondary-3: hsl(217, 19%, 38%); /* #4f5d74 */
@@ -41,6 +42,7 @@ export const BaseStyles = createGlobalStyle`
         --border-radius-soft-1: 0.625rem; /* 10px */
         --border-radius-soft-2: 0.9375rem; /* 15px */
         --border-radius-round: 100%;
+        --border-width-s: 0.25rem; /* 4px */
 
         /* Shadows */
         --box-shadow-1: 0rem 0rem 2.5rem 0rem var(--color-primary-1); /* 0px 0px 40px 0px */

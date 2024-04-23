@@ -56,4 +56,8 @@ export const Button = styled.button`
     box-shadow: var(--box-shadow-1);
     cursor: pointer;
   }
+
+  &:focus-visible {
+    outline: var(--color-primary-2) solid var(--border-width-s);
+  }
 `;
