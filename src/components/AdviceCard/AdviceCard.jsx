@@ -16,7 +16,10 @@ export const AdviceCard = () => {
   };
 
   return (
-    <AdviceCardStyle.Container aria-live="assertive">
+    <AdviceCardStyle.Container
+      aria-live="assertive"
+      style={advice.id === "" ? { display: "none" } : { display: "flex" }}
+    >
       <AdviceCardStyle.RibbonText>
         {`advice # ${advice.id}`}
       </AdviceCardStyle.RibbonText>
