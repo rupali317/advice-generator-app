@@ -12,6 +12,8 @@ export const Container = styled.div`
   align-items: center;
   gap: var(--space-s);
   position: relative;
+  justify-content: space-between;
+  height: 25rem; /* 400px */
 
   @media (min-width: ${DesktopWidth}) {
     border-radius: var(--border-radius-soft-2);
