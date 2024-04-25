@@ -13,7 +13,7 @@ export const Container = styled.div`
   gap: var(--space-s);
   position: relative;
   justify-content: space-between;
-  height: 25rem; /* 400px */
+  min-height: 25rem; /* 400px */
 
   @media (min-width: ${DesktopWidth}) {
     border-radius: var(--border-radius-soft-2);
@@ -61,5 +61,10 @@ export const Button = styled.button`
 
   &:focus-visible {
     outline: var(--color-primary-2) solid var(--border-width-s);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;

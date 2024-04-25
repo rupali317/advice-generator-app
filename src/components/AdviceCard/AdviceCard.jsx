@@ -4,15 +4,20 @@ import * as AdviceCardStyle from "../../styles/AdviceCard.style";
 
 export const AdviceCard = () => {
   const [advice, setAdvice] = React.useState({ id: "", text: "" });
+  const [isButtonStateDisabled, setButtonStateDisabled] = React.useState(false);
 
   React.useEffect(() => {
     fetchAdviceApi();
   }, []);
 
   const fetchAdviceApi = async () => {
+    setButtonStateDisabled(true);
     await fetch("https://api.adviceslip.com/advice")
       .then((response) => response.json())
-      .then(({ slip }) => setAdvice({ id: slip.id, text: slip.advice }));
+      .then(({ slip }) => {
+        setAdvice({ id: slip.id, text: slip.advice });
+        setButtonStateDisabled(false);
+      });
   };
 
   return (
@@ -36,6 +41,9 @@ export const AdviceCard = () => {
         />
       </picture>
       <AdviceCardStyle.Button
+        className={
+          isButtonStateDisabled ? "disabled" : ""
+        } /*RRC: {isButtonStateDisabled ? disabled : ""} */
         onClick={fetchAdviceApi}
         title="Generate advice"
         aria-label="Generate advice"
