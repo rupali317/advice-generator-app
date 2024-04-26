@@ -5,6 +5,7 @@ export const BaseStyles = createGlobalStyle`
         /* Colors */
         --color-primary-1: hsl(150, 100%, 66%); /* #53ffaa */
         --color-primary-2: hsl(156, 66%, 32%); /* ##1c8a5d */
+        --color-primary-3: hsl(156, 16%, 43%); /* 5c7f71 */
         --color-secondary-1: hsl(219, 22%, 16%); /* #202733 */
         --color-secondary-2: hsl(217, 19%, 24%); /* #313a48 */
         --color-secondary-3: hsl(217, 19%, 38%); /* #4f5d74 */

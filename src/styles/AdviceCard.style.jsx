@@ -64,7 +64,8 @@ export const Button = styled.button`
   }
 
   &.disabled {
-    opacity: 0.5;
+    background-color: var(--color-primary-3);
     cursor: not-allowed;
+    box-shadow: none;
   }
 `;
