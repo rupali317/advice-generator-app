@@ -129,4 +129,12 @@ export const DefaultStyles = createGlobalStyle`
         align-items: center;
         justify-content: center;
     }
+
+    .display-none {
+        display: none;
+    }
+
+    .display-flex {
+        display: flex;
+    }
 `;
