@@ -9,8 +9,8 @@ export const BaseStyles = createGlobalStyle`
         --color-secondary-1: hsl(219, 22%, 16%); /* #202733 */
         --color-secondary-2: hsl(217, 19%, 24%); /* #313a48 */
         --color-secondary-3: hsl(217, 19%, 38%); /* #4f5d74 */
-        --color-secondary-4: hsl(0, 0%, 0%, 10.02%);
         --color-neutral-1: hsl(193, 38%, 86%); /* #cee3e9 */
+        --color-neutral-2: hsl(0, 0%, 0%, 10.02%);
 
         /* Typography */
         --font-size-xs: 0.6875rem; /* 11px */
