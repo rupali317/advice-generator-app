@@ -40,9 +40,7 @@ export const AdviceCard = () => {
         />
       </picture>
       <AdviceCardStyle.Button
-        className={
-          isButtonStateDisabled ? "disabled" : ""
-        } /*RRC: {isButtonStateDisabled ? disabled : ""} */
+        disabled={isButtonStateDisabled}
         onClick={fetchAdviceApi}
         title="Generate advice"
         aria-label="Generate advice"

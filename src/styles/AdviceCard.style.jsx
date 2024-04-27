@@ -64,7 +64,7 @@ export const Button = styled.button`
     box-shadow: var(--box-shadow-3);
   }
 
-  &.disabled {
+  &[disabled] {
     background-color: var(--color-primary-3);
     cursor: not-allowed;
     box-shadow: none;
