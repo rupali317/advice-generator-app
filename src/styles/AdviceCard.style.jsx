@@ -60,7 +60,8 @@ export const Button = styled.button`
   }
 
   &:focus-visible {
-    outline: var(--color-primary-2) solid var(--border-width-s);
+    outline: none;
+    box-shadow: var(--box-shadow-3);
   }
 
   &.disabled {

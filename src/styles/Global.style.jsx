@@ -48,6 +48,7 @@ export const BaseStyles = createGlobalStyle`
         /* Shadows */
         --box-shadow-1: 0rem 0rem 2.5rem 0rem var(--color-primary-1); /* 0px 0px 40px 0px */
         --box-shadow-2: 1.875rem 3.125rem 5rem 0rem var(--color-neutral-2); /* 30px 50px 80px 0px */
+        --box-shadow-3: 0rem 0rem 0rem 0.25rem var(--color-primary-2); /* 0px 0px 0px 4px */ 
     }
 
     @font-face {
