@@ -12,12 +12,11 @@ export const AdviceCard = () => {
 
   const fetchAdviceApi = async () => {
     setButtonStateDisabled(true);
-    await fetch("https://api.adviceslip.com/advice")
-      .then((response) => response.json())
-      .then(({ slip }) => {
-        setAdvice({ id: slip.id, text: slip.advice });
-        setButtonStateDisabled(false);
-      });
+    const response = await fetch("https://api.adviceslip.com/advice");
+    const data = await response.json();
+    const { slip } = data;
+    setAdvice({ id: slip.id, text: slip.advice });
+    setButtonStateDisabled(false);
   };
 
   return (
