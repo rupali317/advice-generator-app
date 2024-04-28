@@ -12,11 +12,7 @@ export const AdviceCard = () => {
 
   const fetchAdviceApi = async () => {
     setButtonStateDisabled(true);
-    const response = await fetch("https://api.adviceslip.com/advice", {
-      headers: {
-        "Cache-Control": "no-cache",
-      },
-    });
+    const response = await fetch("https://api.adviceslip.com/advice");
     const data = await response.json();
     const { slip } = data;
     setAdvice({ id: slip.id, text: slip.advice });
