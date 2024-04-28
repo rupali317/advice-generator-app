@@ -11,8 +11,11 @@ export const AdviceCard = () => {
   }, []);
 
   const fetchAdviceApi = async () => {
+    const timestamp = Date.now();
     setButtonStateDisabled(true);
-    const response = await fetch("https://api.adviceslip.com/advice");
+    const response = await fetch(
+      `https://api.adviceslip.com/advice?timestamp=${timestamp}`
+    );
     const data = await response.json();
     const { slip } = data;
     setAdvice({ id: slip.id, text: slip.advice });

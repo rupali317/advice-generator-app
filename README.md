@@ -78,11 +78,7 @@ Users should be able to:
 
 ### What I learned
 
-- Different browsers have different Javascript engines and can behave differently. For instance, when I clicked on the icon button in Firefox, it was not generating the advice. While debugging, I noticed that the API was generating the same response and as a result, it gave an impression that the app was failing in Firefox. Even though, the API fetched different responses in other browsers, there seemed to be a caching issue in Firefox.
-
-### Continued development
-
-- In Firefox, I noticed that on clicking the icon button, it returns the same response, which indicates a caching issue. Inspite of including `Cache-Control: no-cache` to the header of the fetch request, it produce runtime fetch error - failed to fetch. The browser prevented cross-origin requests. I used a simple proxy `http-proxy-middleware` and provided a setupProxy.js file with the following content:
+- Different browsers have different Javascript engines and can behave differently. For instance, when I clicked on the icon button in Firefox, it was not generating the advice. While debugging, I noticed that the API was generating the same response and as a result, it gave an impression that the app was failing in Firefox. Even though, the API fetched different responses in other browsers, there seemed to be a caching issue in Firefox. Inspite of including `Cache-Control: no-cache` to the header of the fetch request, it produce runtime fetch error - failed to fetch. The browser prevented cross-origin requests. I used a simple proxy `http-proxy-middleware` and provided a setupProxy.js file with the following content:
 
 ```js
 const { createProxyMiddleware } = require("http-proxy-middleware");
@@ -101,7 +97,16 @@ module.exports = function (app) {
 };
 ```
 
-and in my AdviceCard.jsx I changed the fetch request to `const response = await fetch("/api/advice");` Though it solved the Firefox issue in my localhost, it did not work when I published my solution to Netlify. This could be due to the way Netlify handles proxying or routing requests. It will be a good opportunity to delve deeper into this.
+and in my AdviceCard.jsx I changed the fetch request to `const response = await fetch("/api/advice");` Though it solved the Firefox issue in my localhost, it did not work when I published my solution to Netlify. This could be due to the way Netlify handles proxying or routing requests. Ultimately, I was inspired by one of my fellow community member's solution of adding a timestamp to the URL.
+
+```js
+const timestamp = Date.now();
+const response = await fetch(
+  `https://api.adviceslip.com/advice?timestamp=${timestamp}`
+);
+```
+
+### Continued development
 
 - Exploring dark mode will be a good idea since one of my users use dark mode to view the URL. In dark mode, the look and feel was not ideal since the user clicked on the seperator first instead of the button. It caused confusion to the user. Good opportunity to fix the visuals in dark mode.
 
@@ -117,4 +122,5 @@ and in my AdviceCard.jsx I changed the fetch request to `const response = await 
 ## Acknowledgments
 
 - I express my gratitude towards my mentor - Deborah for the insightful code review session.
+- I referred to [one of my fellow community member's solution](https://github.com/leanghok120/Advice-Gen/blob/master/script.js) on how to fix the Firefox issue, by adding a timestamp to the URL.
 - I also thank members of Front end mentors - Grace Snow and Alex Marshall for providing insights related to the Firefox issue (as mentioned above)
