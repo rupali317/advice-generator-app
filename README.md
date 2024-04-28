@@ -82,7 +82,7 @@ Users should be able to:
 
 ### Continued development
 
-- In Firefox, I noiced that on clicking the icon button, it returns the same response, which indicates a caching issue. Inspite of including `Cache-Control: no-cache` to the header of the fetch request, it produce runtime fetch error - failed to fetch. The browser prevented cross-origin requests. I used a simple proxy `http-proxy-middleware` and provided a setupProxy.js file with the following content:
+- In Firefox, I noticed that on clicking the icon button, it returns the same response, which indicates a caching issue. Inspite of including `Cache-Control: no-cache` to the header of the fetch request, it produce runtime fetch error - failed to fetch. The browser prevented cross-origin requests. I used a simple proxy `http-proxy-middleware` and provided a setupProxy.js file with the following content:
 
 ```js
 const { createProxyMiddleware } = require("http-proxy-middleware");
