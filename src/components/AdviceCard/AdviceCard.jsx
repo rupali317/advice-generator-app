@@ -12,7 +12,7 @@ export const AdviceCard = () => {
 
   const fetchAdviceApi = async () => {
     setButtonStateDisabled(true);
-    const response = await fetch("/api/advice", {
+    const response = await fetch("https://api.adviceslip.com/advice", {
       headers: {
         "Cache-Control": "no-cache",
       },
